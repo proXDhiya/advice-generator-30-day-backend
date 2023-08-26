@@ -5,8 +5,10 @@ const btn = document.getElementById('button');
 btn.addEventListener('click', async () => {
     try {
         // fetch data from http://localhost:3000/api/advices/random
+        // fetch data from https://advice-generator-tjk2.onrender.com/api/advices/random
         const response = await fetch(
-            'http://localhost:3000/api/advices/random'
+            // 'http://localhost:3000/api/advices/random'
+            'https://advice-generator-tjk2.onrender.com/api/advices/random'
         );
 
         // convert response to json
