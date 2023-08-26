@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Inter', sans-serif;
+    --font-size: 16px;
+    --font-weight-reg: 400;
+    --font-weight-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-reg);
+    line-height: 1.5;
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+
+    & > main {
+        background-color: #2a292f;
+        max-width: 500px;
+        width: 90%;
+        border-radius: 10px;
+        position: relative;
+        padding: 20px 30px 35px 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-weight: var(--font-weight-bold);
+        text-align: center;
+
+        & > #advice-number {
+            font-size: 1.5rem;
+            color: greenyellow;
+        }
+
+        & > #advice {
+            font-size: 1rem;
+        }
+
+        & > #advice::before {
+            content: open-quote;
+        }
+
+        & > #advice::after {
+            content: close-quote;
+        }
+
+        
+        & > #button {
+            --size: 50px;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            bottom: calc(var(--size) / -2);
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+                outline: 2px solid #bddef7;
+            }
+
+            & > img {
+                width: 80%;
+                margin: 10%;
+            }
+        }
+    }
+}
